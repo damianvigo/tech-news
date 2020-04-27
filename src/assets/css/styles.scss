@@ -3,25 +3,30 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   background: #000;
   color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   font-size: 16px;
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+}
 
 a {
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 .container {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /* Navigation */
 .nav-main {
@@ -31,29 +36,37 @@ ul {
   align-items: center;
   height: 60px;
   padding: 20px 0;
-  /* Nav Left */ }
-  .nav-main__nav-brand {
-    width: 50px; }
-  .nav-main__nav-menu {
+
+  /* Nav Left */
+  &__nav-brand {
+    width: 50px;
+  }
+  &__nav-menu {
     display: flex;
     margin-left: 20px;
-    flex: 1; }
-  .nav-main__nav-li {
-    padding: 10px; }
-  .nav-main__nav-a {
-    padding: 6px; }
-    .nav-main__nav-a:hover {
+    flex: 1;
+  }
+  &__nav-li {
+    padding: 10px;
+  }
+  &__nav-a {
+    padding: 6px;
+    &:hover {
       border-bottom: 2px solid #fff;
-      transition: 0.3s ease all; }
+      transition: 0.3s ease all;
+    }
+  }
+}
 
 /* SHOWCASE */
 .line {
-  margin: 10px 0; }
+  margin: 10px 0;
+}
 
 .showcase {
   width: 100%;
   height: 550px;
-  background: url("../img/showcase2.jpg");
+  background: url('../img/showcase2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -61,10 +74,12 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; }
-  .showcase__title, .showcase__text {
-    margin-bottom: 10px; }
-  .showcase__btn {
+  justify-content: flex-end;
+  &__title,
+  &__text {
+    margin-bottom: 10px;
+  }
+  &__btn {
     cursor: pointer;
     display: inline-block;
     border: 0;
@@ -74,8 +89,9 @@ ul {
     color: #fff;
     font-size: 15px;
     border: 1px solid #fff;
-    margin: 10px 0; }
-    .showcase__btn:hover {
-      opacity: 0.7; }
-
-/*# sourceMappingURL=styles.css.map */
+    margin: 10px 0;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
