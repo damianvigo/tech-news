@@ -1,3 +1,24 @@
+$Fuente1: 'Oswald', sans-serif;
+$color-primario: #fff;
+$color-secundario: #000;
+$color-variacion-claro: #f2f2f2;
+
+@mixin btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #262626;
+  color: $color-primario;
+  font-size: 15px;
+  border: 1px solid $color-primario;
+  margin: 10px 0;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -7,15 +28,15 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: $color-secundario;
+  color: $color-primario;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.3'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   font-size: 16px;
   font-family: 'Oswald', sans-serif;
 }
 
 a {
-  color: #fff;
+  color: $color-primario;
   text-decoration: none;
 }
 
@@ -52,7 +73,7 @@ ul {
   &__nav-a {
     padding: 6px;
     &:hover {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid $color-primario;
       transition: 0.3s ease all;
     }
   }
@@ -71,6 +92,7 @@ ul {
   background-position: center;
   background-size: cover;
   padding-bottom: 50px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,18 +102,66 @@ ul {
     margin-bottom: 10px;
   }
   &__btn {
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-    background: #262626;
-    color: #fff;
-    font-size: 15px;
-    border: 1px solid #fff;
+    @include btn;
+  }
+}
+
+/* NEWS CARDS */
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  .new-cards__card {
+    width: 100%;
+  }
+  .new-cards__img {
+    width: 100%;
+  }
+  .new-cards__title {
+    font-size: 20px;
     margin: 10px 0;
+  }
+  .new-cards__a {
+    padding: 10px 0;
+    color: $color-variacion-claro;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
     &:hover {
-      opacity: 0.7;
+      text-decoration: underline;
     }
+  }
+}
+
+/* CARDS BANNER ONE */
+
+.cards-banner-one {
+  width: 100%;
+  height: 350px;
+  background: url('../img/tech-red.jpg');
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  &__content {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-primario;
+    background: rgba($color-secundario, 0.7);
+  }
+  &__btn {
+    @include btn;
+  }
+  &__h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  &__p {
+    margin: 10px 0 10px 0;
+    width: 80%;
   }
 }
